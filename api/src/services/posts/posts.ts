@@ -18,7 +18,7 @@ export const post: QueryResolvers['post'] = ({ id }) => {
 
 export const createPost: MutationResolvers['createPost'] = ({ input }) => {
   return db.post.create({
-    data: input,
+    data: { ...input, userId: context.currentUser.id },
   })
 }
 
@@ -39,4 +39,6 @@ export const Post: PostRelationResolvers = {
   comments: (_obj, { root }) => {
     return db.post.findUnique({ where: { id: root?.id } }).comments()
   },
+  user: (_obj, { root }) =>
+    db.post.findFirst({ where: { id: root.id } }).user(),
 }
