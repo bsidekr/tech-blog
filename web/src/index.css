@@ -11,3 +11,21 @@
 /**
  * END --- SETUP TAILWINDCSS EDIT
  */
+
+ @font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+@layer base {
+  h1 {
+    @apply text-4xl font-gmarket font-bold text-zinc-800 dark:text-zinc-100 sm:text-5xl;
+  }
+  p {
+    @apply text-base font-notoSansKr text-zinc-600 dark:text-zinc-400
+  }
+}
