@@ -2,6 +2,27 @@ import * as React from 'react'
 
 import { MantineProvider } from '@mantine/core'
 import * as theme from 'config/mantine.config'
+
+export const parameters = {
+  backgrounds: {
+    default: 'light',
+    values: [
+      {
+        name: 'light',
+        value: '#ffffff',
+      },
+      {
+        name: 'dark',
+        value: '#333333',
+      },
+      {
+        name: 'campaign dark',
+        value: '#03050E',
+      },
+    ],
+  },
+}
+
 /** @type { import("@storybook/csf").GlobalTypes } */
 export const globalTypes = {}
 /**

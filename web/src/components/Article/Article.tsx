@@ -10,7 +10,7 @@ const truncate = (text: string, length: number) => {
 }
 
 interface Props {
-  article: Omit<Post, 'createdAt'>
+  article: Omit<Post, 'createdAt' | 'comments'>
   summary?: boolean
 }
 

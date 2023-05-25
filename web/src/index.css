@@ -12,9 +12,10 @@
  * END --- SETUP TAILWINDCSS EDIT
  */
 
- @font-face {
+@font-face {
   font-family: 'GmarketSansMedium';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+    format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,9 +24,38 @@
 
 @layer base {
   h1 {
-    @apply text-4xl font-gmarket font-bold text-zinc-800 dark:text-zinc-100 sm:text-5xl;
+    @apply font-gmarket text-4xl font-bold text-zinc-800 dark:text-zinc-100 sm:text-5xl;
+  }
+  h2 {
+    @apply font-gmarket text-2xl font-semibold text-zinc-800 dark:text-zinc-100 sm:text-3xl;
   }
   p {
-    @apply text-base font-notoSansKr text-zinc-600 dark:text-zinc-400
+    @apply font-notoSansKr text-base text-zinc-600 dark:text-zinc-400;
   }
+  a {
+    color: inherit;
+    text-decoration: none;
+    line-height: 1;
+  }
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+  }
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.label {
+  @apply font-notoSansKr text-sm text-zinc-400 dark:text-zinc-500;
+}
+
+.cta {
+  @apply font-notoSansKr font-medium text-purple-500;
+}
+
+.avatar-circle {
+  @apply rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0;
 }
