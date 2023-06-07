@@ -10,10 +10,9 @@ const ArticlePage = ({ id }: Props) => {
   return (
     <>
       <MetaTags
-        title="Articles"
+        title="Article"
         description="All of our long-form thoughts on programming, leadership, product design, and more, collected in chronological order."
       />
-
       <ArticleCell id={id} />
     </>
   )
