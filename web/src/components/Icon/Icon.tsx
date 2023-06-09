@@ -3,7 +3,7 @@ import { Icon as TremorIcon } from '@tremor/react'
 
 interface IconProps {
   className?: string
-  size?: 'sm' | 'md' | 'lg' | 'xl'
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   variant?: 'simple' | 'light' | 'shadow' | 'solid' | 'outlined'
   color?:
     | 'slate'

@@ -49,7 +49,7 @@ type CardTitleProps<C extends React.ElementType> = {
   children: ReactNode
 } & React.ComponentPropsWithoutRef<C>
 
-Card.Title = function CardTitle<C extends React.ElementType = 'h2'>({
+Card.Title = function CardTitle<C extends React.ElementType>({
   as,
   href,
   children,
@@ -83,7 +83,7 @@ Card.Cta = function CardCta({ children }: CardCtaProps) {
       className="cta relative z-10 mt-4 flex items-center text-sm"
     >
       {children}
-      <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />
+      <ChevronRightIcon className="ml-1 stroke-current" size="xs" />
     </div>
   )
 }
@@ -95,7 +95,7 @@ type CardEyebrowProps<C extends React.ElementType> = {
   children: ReactNode
 } & React.ComponentPropsWithoutRef<C>
 
-Card.Eyebrow = function CardEyebrow<C extends React.ElementType = 'p'>({
+Card.Eyebrow = function CardEyebrow<C extends React.ElementType>({
   as,
   decorate = false,
   className,

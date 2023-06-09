@@ -56,3 +56,19 @@ export const timeTag = (dateTime?: string) => {
 export const checkboxInputTag = (checked: boolean) => {
   return <input type="checkbox" checked={checked} disabled />
 }
+
+/**
+ * 서버에서 받은 데이터를 사용자 언어와 timeZone에 맞게 표시
+ * @example
+ * // return 2023년 1월 1일 (국문 및 Asia/Seoul 가정)
+ * intlDateTimeFormat("2023-01-01T03:52:36.808Z")
+ */
+export const intlDateTimeFormat = (date: string | Date, option?: object) => {
+  const { timeZone } = Intl.DateTimeFormat().resolvedOptions()
+  const defaultOption = { dateStyle: 'long', timeZone }
+  const intlDate = new Intl.DateTimeFormat('ko-KR', option ?? defaultOption) // FIXME: locale 감지하는 hook 호출시 에러 해결 필요
+
+  if (typeof date === 'string') return intlDate.format(Date.parse(date))
+  else if (typeof date.getMonth === 'function')
+    return intlDate.format(date.getTime())
+}
