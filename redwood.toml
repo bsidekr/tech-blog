@@ -9,7 +9,7 @@
   bundler = "vite"
   title = "Bside Korea"
   port = 8910
-  apiUrl = "/.netlify/functions"
+  apiUrl = "/.redwood/functions"
   includeEnvironmentVariables = [] # any ENV vars that should be available to the web side, see https://redwoodjs.com/docs/environment-variables#web
 [api]
   port = 8911
