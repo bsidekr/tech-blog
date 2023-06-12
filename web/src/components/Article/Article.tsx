@@ -1,4 +1,4 @@
-import type { ArticlesQuery } from 'types/graphql'
+import type { FindArticleListQuery } from 'types/graphql'
 
 import { Link, routes } from '@redwoodjs/router'
 
@@ -10,7 +10,7 @@ const truncate = (text: string, length: number) => {
 }
 
 interface Props {
-  article: ArticlesQuery['articles'][0]
+  article: FindArticleListQuery['articles'][0]
   summary?: boolean
 }
 

@@ -34,8 +34,21 @@ const ARTICLE = {
   },
 }
 
-export const generated = () => {
-  return <ArticleCard article={ARTICLE} />
+const Template = (args) => <ArticleCard article={args.ARTICLE} />
+
+export const Default = Template.bind({})
+Default.args = {
+  ARTICLE,
+}
+
+export const SmallSize = Template.bind({})
+SmallSize.args = {
+  ARTICLE,
+}
+SmallSize.parameters = {
+  viewport: {
+    defaultViewport: 'mobile1',
+  },
 }
 
 export default {

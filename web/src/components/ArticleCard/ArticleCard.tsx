@@ -27,6 +27,7 @@ const ArticleCard = ({ article }: Props) => {
           {formattedDateTime}
         </Card.Eyebrow>
         <Card.Description>{article.body}</Card.Description>
+        <Card.Cta>자세히 보기</Card.Cta>
       </Card>
       <Card.Eyebrow
         as="time"
