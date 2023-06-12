@@ -2,6 +2,12 @@ import { ChevronRightIcon as HeroRightIcon } from '@heroicons/react/24/solid'
 import { Icon as TremorIcon } from '@tremor/react'
 
 interface IconProps {
+  icon?: React.ForwardRefExoticComponent<
+    Omit<React.SVGProps<SVGSVGElement>, 'ref'> & {
+      title?: string
+      titleId?: string
+    } & React.RefAttributes<SVGSVGElement>
+  >
   className?: string
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   variant?: 'simple' | 'light' | 'shadow' | 'solid' | 'outlined'
@@ -30,7 +36,8 @@ interface IconProps {
     | 'rose'
 }
 
-export function ChevronRightIcon({
+export function Icon({
+  icon = HeroRightIcon,
   size = 'sm',
   variant = 'simple',
   color = 'purple',
@@ -43,7 +50,7 @@ export function ChevronRightIcon({
       variant={variant}
       color={color}
       className={className}
-      icon={HeroRightIcon}
+      icon={icon}
       {...props}
     />
   )

@@ -1,10 +1,8 @@
 import type { ComponentMeta } from '@storybook/react'
 
-import { ChevronRightIcon } from './Icon'
+import { Icon } from './Icon'
 
-const Template = (args) => (
-  <ChevronRightIcon size={args.size} variant={args.variant} />
-)
+const Template = (args) => <Icon size={args.size} variant={args.variant} />
 
 const defaultArgs = {
   size: 'sm',
@@ -73,6 +71,6 @@ OutlinedVariant.args = {
 
 export default {
   title: 'Components/Icon',
-  component: ChevronRightIcon,
+  component: Icon,
   tas: ['autodocs'],
-} as ComponentMeta<typeof ChevronRightIcon>
+} as ComponentMeta<typeof Icon>
