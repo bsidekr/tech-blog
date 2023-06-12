@@ -1,4 +1,4 @@
-import { ChevronRightIcon as HeroRightIcon } from '@heroicons/react/solid'
+import { ChevronRightIcon as HeroRightIcon } from '@heroicons/react/24/solid'
 import { Icon as TremorIcon } from '@tremor/react'
 
 interface IconProps {

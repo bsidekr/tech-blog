@@ -1,6 +1,6 @@
 import { render } from '@redwoodjs/testing/web'
 
-import Icon from './Icon'
+import { ChevronRightIcon } from './Icon'
 
 //   Improve this test with help from the Redwood Testing Doc:
 //    https://redwoodjs.com/docs/testing#testing-components
@@ -8,7 +8,7 @@ import Icon from './Icon'
 describe('Icon', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<Icon />)
+      render(<ChevronRightIcon />)
     }).not.toThrow()
   })
 })
