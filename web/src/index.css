@@ -12,6 +12,8 @@
  * END --- SETUP TAILWINDCSS EDIT
  */
 
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 @font-face {
   font-family: 'GmarketSansMedium';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
@@ -19,8 +21,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 @layer base {
   h1 {
