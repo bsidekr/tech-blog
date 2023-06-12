@@ -1,6 +1,6 @@
 import { MetaTags } from '@redwoodjs/web'
 
-import ArticleCell from 'src/components/ArticleCell'
+import ArticleCell from 'src/components/Article/ArticleCell'
 
 interface Props {
   id: number

@@ -5,16 +5,11 @@ import { Link, routes } from '@redwoodjs/router'
 import CommentForm from 'src/components/CommentForm'
 import CommentsCell from 'src/components/CommentsCell'
 
-const truncate = (text: string, length: number) => {
-  return text.substring(0, length) + '...'
-}
-
 interface Props {
   article: FindArticleListQuery['articles'][0]
-  summary?: boolean
 }
 
-const Article = ({ article, summary = false }: Props) => {
+const Article = ({ article }: Props) => {
   return (
     <article>
       <header>
@@ -25,17 +20,13 @@ const Article = ({ article, summary = false }: Props) => {
           </span>
         </h2>
       </header>
-      <div className="mt-2 font-light text-gray-900">
-        {summary ? truncate(article.body, 100) : article.body}
-      </div>
-      {!summary && (
+      <div className="mt-2 font-light text-gray-900">{article.body}</div>
+      <div className="mt-12">
+        <CommentForm postId={article.id} />
         <div className="mt-12">
-          <CommentForm postId={article.id} />
-          <div className="mt-12">
-            <CommentsCell postId={article.id} />
-          </div>
+          <CommentsCell postId={article.id} />
         </div>
-      )}
+      </div>
     </article>
   )
 }

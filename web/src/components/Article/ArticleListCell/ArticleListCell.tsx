@@ -5,7 +5,7 @@ import type {
 
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
-import ArticleCard from '../ArticleCard'
+import ArticleCard from 'src/components/Article/ArticleCard/ArticleCard'
 
 export const QUERY = gql`
   query FindArticleListQuery {

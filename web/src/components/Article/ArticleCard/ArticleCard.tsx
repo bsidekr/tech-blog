@@ -2,9 +2,12 @@ import { FindArticleListQuery } from 'types/graphql'
 
 import { routes } from '@redwoodjs/router'
 
+import Card from 'src/components/Card'
 import { intlDateTimeFormat } from 'src/lib/formatters'
 
-import Card from '../Card'
+const truncate = (text: string, length: number) => {
+  return text.substring(0, length) + '...'
+}
 
 interface Props {
   article: FindArticleListQuery['articles'][0]
@@ -26,7 +29,7 @@ const ArticleCard = ({ article }: Props) => {
         >
           {formattedDateTime}
         </Card.Eyebrow>
-        <Card.Description>{article.body}</Card.Description>
+        <Card.Description>{truncate(article.body, 110)}</Card.Description>
         <Card.Cta>자세히 보기</Card.Cta>
       </Card>
       <Card.Eyebrow

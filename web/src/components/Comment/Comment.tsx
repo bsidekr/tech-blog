@@ -45,7 +45,7 @@ const Comment = ({ comment }: Props) => {
   return (
     <div className="relative rounded-lg bg-gray-200 p-8">
       <header className="flex justify-between">
-        <h2 className="font-semibold text-gray-700">{comment.name}</h2>
+        <h3 className="font-semibold text-gray-700">{comment.name}</h3>
         <time className="text-xs text-gray-500" dateTime={comment.createdAt}>
           {formattedDate(comment.createdAt)}
         </time>

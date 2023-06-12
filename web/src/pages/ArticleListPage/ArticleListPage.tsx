@@ -1,6 +1,6 @@
 import { MetaTags } from '@redwoodjs/web'
 
-import ArticleListCell from 'src/components/ArticleListCell'
+import ArticleListCell from 'src/components/Article/ArticleListCell'
 import SimpleLayout from 'src/layouts/SimpleLayout/SimpleLayout'
 
 const ArticleListPage = () => {
