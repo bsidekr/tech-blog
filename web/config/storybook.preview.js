@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { MantineProvider } from '@mantine/core'
+import { ColorSchemeProvider, MantineProvider } from '@mantine/core'
 import * as theme from 'config/mantine.config'
 
 export const parameters = {
@@ -34,11 +34,34 @@ export const globalTypes = {}
 const _exampleDecorator = (StoryFn, _context) => {
   return <StoryFn />
 }
-const withMantine = (StoryFn) => {
+const useWithMantine = (StoryFn) => {
   return (
     <MantineProvider theme={theme}>
       <StoryFn />
     </MantineProvider>
   )
 }
-export const decorators = [withMantine]
+
+export const decorators = [useWithMantine]
+
+export const ColorSchemeWrapper = ({ children, initialScheme = 'light' }) => {
+  const [colorScheme, setColorScheme] = React.useState(initialScheme)
+  const toggleColorScheme = (value) => {
+    setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
+  }
+
+  return (
+    <ColorSchemeProvider
+      colorScheme={colorScheme}
+      toggleColorScheme={toggleColorScheme}
+    >
+      <MantineProvider
+        theme={{ ...theme, colorScheme }}
+        withGlobalStyles
+        withNormalizeCSS
+      >
+        <main className={colorScheme}>{children}</main>
+      </MantineProvider>
+    </ColorSchemeProvider>
+  )
+}
