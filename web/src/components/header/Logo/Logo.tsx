@@ -19,12 +19,7 @@ const Logo = ({ large = false, className = '', ...props }) => {
   const { colorScheme } = useMantineColorScheme()
 
   return (
-    <Link
-      to={routes.home()}
-      aria-label="Home"
-      className={clsx(className, 'pointer-events-auto')}
-      {...props}
-    >
+    <Link to={routes.home()} aria-label="Home" className={className} {...props}>
       <svg
         className={clsx(
           'rounded-full dark:bg-zinc-800',

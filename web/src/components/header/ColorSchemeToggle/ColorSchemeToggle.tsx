@@ -1,4 +1,4 @@
-import { Switch, Group, useMantineColorScheme } from '@mantine/core'
+import { Switch, useMantineColorScheme } from '@mantine/core'
 
 import { SunIcon, MoonIcon } from './ColorSchemeToggle.utils'
 
@@ -20,19 +20,15 @@ export const SwitchToggle = () => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme()
 
   return (
-    <Group position="center" my={30}>
-      <Switch
-        checked={colorScheme === 'dark'}
-        onChange={() => toggleColorScheme()}
-        size="lg"
-        onLabel={
-          <SunIcon className="h-4 w-4 fill-white stroke-white stroke-2" />
-        }
-        offLabel={
-          <MoonIcon className="h-4 w-4 fill-gray-500 stroke-gray-500 stroke-2" />
-        }
-      />
-    </Group>
+    <Switch
+      checked={colorScheme === 'dark'}
+      onChange={() => toggleColorScheme()}
+      size="lg"
+      onLabel={<SunIcon className="h-4 w-4 fill-white stroke-white stroke-2" />}
+      offLabel={
+        <MoonIcon className="h-4 w-4 fill-gray-500 stroke-gray-500 stroke-2" />
+      }
+    />
   )
 }
 
