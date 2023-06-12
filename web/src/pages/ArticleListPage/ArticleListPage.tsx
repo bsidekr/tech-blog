@@ -1,11 +1,7 @@
 import { MetaTags } from '@redwoodjs/web'
 
-import ArticlesCell from 'src/components/ArticlesCell'
+import ArticleListCell from 'src/components/ArticleListCell'
 import SimpleLayout from 'src/layouts/SimpleLayout/SimpleLayout'
-
-// interface Props {
-//   id: number
-// }
 
 const ArticleListPage = () => {
   return (
@@ -19,7 +15,7 @@ const ArticleListPage = () => {
         intro="우리는 문제와 해법에 접근하는 태도와 방식, 철학에 차이가 있다고 생각하며, 프로그래밍, 상품 디자인, 스타트업 등에 대한 우리의 생각들을 시간순으로 정리했습니다."
       >
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
-          <ArticlesCell />
+          <ArticleListCell />
         </div>
       </SimpleLayout>
     </>

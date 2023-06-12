@@ -1,4 +1,4 @@
-import { ArticlesQuery } from 'types/graphql'
+import { FindArticleListQuery } from 'types/graphql'
 
 import { routes } from '@redwoodjs/router'
 
@@ -7,7 +7,7 @@ import { intlDateTimeFormat } from 'src/lib/formatters'
 import Card from '../Card'
 
 interface Props {
-  article: ArticlesQuery['articles'][0]
+  article: FindArticleListQuery['articles'][0]
 }
 
 const ArticleCard = ({ article }: Props) => {

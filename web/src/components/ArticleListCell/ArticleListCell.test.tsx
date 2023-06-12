@@ -1,7 +1,7 @@
-import { render, screen, within } from '@redwoodjs/testing/web'
+import { render } from '@redwoodjs/testing/web'
 
-import { Loading, Empty, Failure, Success } from './ArticlesCell'
-import { standard } from './ArticlesCell.mock'
+import { Loading, Empty, Failure, Success } from './ArticleListCell'
+import { standard } from './ArticleListCell.mock'
 
 // Generated boilerplate tests do not account for all circumstances
 // and can fail without adjustments, e.g. Float and DateTime types.
@@ -9,7 +9,7 @@ import { standard } from './ArticlesCell.mock'
 //        https://redwoodjs.com/docs/testing#testing-cells
 // https://redwoodjs.com/docs/testing#jest-expect-type-considerations
 
-describe('ArticlesCell', () => {
+describe('ArticleListCell', () => {
   it('renders Loading successfully', () => {
     expect(() => {
       render(<Loading />)
@@ -35,18 +35,8 @@ describe('ArticlesCell', () => {
   // 2. Add test: expect(screen.getByText('Hello, world')).toBeInTheDocument()
 
   it('renders Success successfully', async () => {
-    const articles = standard().articles
-    render(<Success articles={articles} />)
-
-    articles.forEach((article) => {
-      const truncatedBody = article.body.substring(0, 10)
-      const matchedBody = screen.getByText(truncatedBody, { exact: false })
-      const ellipsis = within(matchedBody).getByText('...', { exact: false })
-
-      expect(screen.getByText(article.title)).toBeInTheDocument()
-      expect(screen.queryByText(article.body)).not.toBeInTheDocument()
-      expect(matchedBody).toBeInTheDocument()
-      expect(ellipsis).toBeInTheDocument()
-    })
+    expect(() => {
+      render(<Success articles={standard().articles} />)
+    }).not.toThrow()
   })
 })

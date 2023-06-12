@@ -7,7 +7,7 @@ import type {
 import { db } from 'src/lib/db'
 
 export const posts: QueryResolvers['posts'] = () => {
-  return db.post.findMany()
+  return db.post.findMany({ orderBy: { createdAt: 'desc' } })
 }
 
 export const post: QueryResolvers['post'] = ({ id }) => {
