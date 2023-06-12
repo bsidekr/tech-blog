@@ -13,7 +13,7 @@
     ]
   },
   "dependencies": {
-    "@heroicons/react": "1.0.6",
+    "@heroicons/react": "^2.0.18",
     "@redwoodjs/auth-dbauth-web": "5.2.3",
     "@redwoodjs/forms": "5.2.3",
     "@redwoodjs/router": "5.2.3",

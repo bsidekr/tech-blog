@@ -3362,12 +3362,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@heroicons/react@npm:1.0.6":
-  version: 1.0.6
-  resolution: "@heroicons/react@npm:1.0.6"
+"@heroicons/react@npm:^2.0.18":
+  version: 2.0.18
+  resolution: "@heroicons/react@npm:2.0.18"
   peerDependencies:
     react: ">= 16"
-  checksum: 04d77c604be6a9d3373e2cf773ef0f3e9fa02b52ed85260c440e629682dc3045935090811dda0423fa9bb2d5f8090cdbdda54c901dd3598c9bad691d0abce3d6
+  checksum: 3cef7f67c65f8b00dc4f23788e468e661a24bd805f80e3b5514a986d69c91ef05407cf50078691573eced47147db87a9bd00cc165e4fecd2a9657cbaf3eaafb5
   languageName: node
   linkType: hard
 
@@ -25584,7 +25584,7 @@ __metadata:
   resolution: "web@workspace:web"
   dependencies:
     "@emotion/react": ^11.11.0
-    "@heroicons/react": 1.0.6
+    "@heroicons/react": ^2.0.18
     "@mantine/core": ^6.0.11
     "@mantine/hooks": ^6.0.11
     "@redwoodjs/auth-dbauth-web": 5.2.3
