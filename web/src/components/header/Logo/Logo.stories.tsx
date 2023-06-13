@@ -1,29 +1,29 @@
 import type { ComponentMeta } from '@storybook/react'
 import { ColorSchemeWrapper } from 'config/storybook.preview'
 
-import Logo, { LogoContainer } from './Logo'
+import Logo, { LogoContainer, LogoProps } from './Logo'
 
-export const Generated = () => {
+export const Generated = (args: LogoProps) => {
   return (
     <ColorSchemeWrapper>
-      <Logo />
+      <Logo {...args} />
     </ColorSchemeWrapper>
   )
 }
 
-export const GeneratedDark = () => {
+export const GeneratedDark = (args: LogoProps) => {
   return (
     <ColorSchemeWrapper initialScheme="dark">
-      <Logo />
+      <Logo {...args} />
     </ColorSchemeWrapper>
   )
 }
 
-export const Wrapped = () => {
+export const Wrapped = (args: LogoProps) => {
   return (
     <ColorSchemeWrapper>
       <LogoContainer>
-        <Logo />
+        <Logo {...args} />
       </LogoContainer>
     </ColorSchemeWrapper>
   )
@@ -35,11 +35,11 @@ Wrapped.parameters = {
   },
 }
 
-export const WrappedDark = () => {
+export const WrappedDark = (args: LogoProps) => {
   return (
     <ColorSchemeWrapper initialScheme="dark">
       <LogoContainer>
-        <Logo />
+        <Logo {...args} />
       </LogoContainer>
     </ColorSchemeWrapper>
   )

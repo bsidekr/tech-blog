@@ -1,7 +1,12 @@
-import { clsx, useMantineColorScheme } from '@mantine/core'
+import { clsx } from '@mantine/core'
 
 import { routes } from '@redwoodjs/router'
 import { Link } from '@redwoodjs/router'
+
+export interface LogoProps {
+  large: boolean
+  className: string
+}
 
 export const LogoContainer = ({ className = '', ...props }) => {
   return (
@@ -15,17 +20,14 @@ export const LogoContainer = ({ className = '', ...props }) => {
   )
 }
 
-const Logo = ({ large = false, className = '', ...props }) => {
-  const { colorScheme } = useMantineColorScheme()
-
+const Logo = ({ large = false, className = '', ...props }: LogoProps) => {
   return (
     <Link to={routes.home()} aria-label="Home" className={className} {...props}>
       <svg
         className={clsx(
-          'rounded-full dark:bg-zinc-800',
+          'rounded-full fill-black dark:bg-zinc-800 dark:fill-white',
           large ? 'h-16 w-16' : 'h-12 w-12'
         )}
-        fill={colorScheme == 'dark' ? 'white' : 'black'}
         viewBox="0 0 61 20"
         xmlns="http://www.w3.org/2000/svg"
       >
