@@ -20,16 +20,18 @@ const Header = () => {
               </LogoContainer>
             </div>
             <div className="flex flex-1 items-center justify-end md:justify-center">
-              <div>
-                <MobileNavigation className="md:hidden" />
-                <DesktopNavigation className="hidden md:block" />
-              </div>
+              <MobileNavigation className="md:hidden" />
+              <DesktopNavigation className="hidden md:block" />
             </div>
             <div className="flex justify-end md:flex-1">
               <ActionToggle />
               {isAuthenticated && (
-                <div className="absolute flex flex-col items-start gap-2">
-                  <button type="button" onClick={logOut}>
+                <div className="absolute top-16 flex flex-col items-end gap-2">
+                  <button
+                    type="button"
+                    onClick={logOut}
+                    className="bg-white p-2 shadow hover:bg-gray-100"
+                  >
                     Logout
                   </button>
                   <div>{currentUser.email}</div>

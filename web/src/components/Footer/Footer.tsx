@@ -22,10 +22,10 @@ const Footer = () => {
         <div className="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
           <InnerContainer>
             <div className="flex flex-col-reverse items-start justify-between gap-16 md:flex-row md:items-center">
-              <div className="grid w-full grid-cols-2 gap-x-8 gap-y-4 font-medium text-zinc-800 dark:text-zinc-200 md:flex md:w-fit md:flex-wrap">
+              <div className="grid w-full grid-cols-2 gap-x-8 gap-y-4 text-sm font-medium text-zinc-800 dark:text-zinc-200 md:flex md:w-fit md:flex-wrap">
                 {items}
               </div>
-              <div className="flex items-center gap-4 md:flex-col md:items-end">
+              <div className="flex items-center gap-4 text-sm md:flex-col md:items-end">
                 <LogoContainer>
                   <Logo />
                 </LogoContainer>
