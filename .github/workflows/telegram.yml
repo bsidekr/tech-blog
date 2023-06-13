@@ -1,0 +1,28 @@
+name: send result to telegram
+
+on:
+  workflow_call:
+    inputs:
+      STAGE:
+        required: true
+        type: string
+        default: ETC CHANGE
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: send telegram message on push
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            [Author]: ✋ ${{ github.actor }}
+            [Repository]: ${{ github.repository }}
+            [Stage]: ${{ inputs.STAGE }}
+            [Status]: 😎 **Success**
+
+            [Commit message]: ${{ github.event.head_commit.message }}
+
+            [See changes]: https://github.com/${{ github.repository }}/commit/${{github.sha}}

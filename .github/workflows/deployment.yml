@@ -1,0 +1,47 @@
+name: deploy based on stage, side
+
+on:
+  release:
+    types: [published]
+  push:
+    branches:
+      - 'release/**' # for production
+      - 'main' # for dev
+    tags:
+      - '**' # for qa
+
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read
+
+jobs:
+  setStage:
+    runs-on: [self-hosted]
+    outputs:
+      STAGE: ${{ steps.stage1.outputs.STAGE || steps.stage2.outputs.STAGE || steps.stage3.outputs.STAGE }}
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@master
+        with:
+          persist-credentials: true
+      - name: set stage dev
+        id: stage1
+        if: github.ref == 'refs/heads/main'
+        run: echo "STAGE=dev" >> $GITHUB_OUTPUT
+      - name: set stage qa
+        id: stage2
+        if: startsWith(github.ref, 'refs/tags') && github.event_name != 'release'
+        run: echo "STAGE=qa" >> $GITHUB_OUTPUT
+      - name: set stage production
+        id: stage3
+        if: (github.event_name == 'release' && github.event.action == 'published') || startsWith(github.ref, 'refs/heads/release')
+        run: echo "STAGE=production" >> $GITHUB_OUTPUT
+
+  telegram:
+    if: ${{ always() }}
+    needs: [setStage]
+    uses: ./.github/workflows/telegram.yml
+    secrets: inherit
+    with:
+      STAGE: ${{ needs.setStage.outputs.STAGE }}
