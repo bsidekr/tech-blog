@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import { ColorSchemeProvider, MantineProvider } from '@mantine/core'
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import * as theme from 'config/mantine.config'
 
 export const parameters = {
@@ -20,6 +21,14 @@ export const parameters = {
         value: '#03050E',
       },
     ],
+  },
+}
+
+export const preview = {
+  parameters: {
+    viewport: {
+      viewports: INITIAL_VIEWPORTS,
+    },
   },
 }
 

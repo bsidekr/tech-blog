@@ -72,5 +72,5 @@ OutlinedVariant.args = {
 export default {
   title: 'Components/Icon',
   component: Icon,
-  tas: ['autodocs'],
+  tags: ['autodocs'],
 } as ComponentMeta<typeof Icon>

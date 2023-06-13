@@ -2,7 +2,7 @@ import { Container } from '@mantine/core'
 
 import { useAuth } from 'src/auth'
 
-import ActionToggle from '../ColorSchemeToggle/ColorSchemeToggle'
+import { ActionToggle } from '../ColorSchemeToggle/ColorSchemeToggle'
 import Logo, { LogoContainer } from '../Logo/Logo'
 import DesktopNavigation from '../navigation/DesktopNavigation/DesktopNavigation'
 import MobileNavigation from '../navigation/MobileNavigation/MobileNavigation'

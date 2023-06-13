@@ -9,4 +9,11 @@ export const generated = () => {
 export default {
   title: 'Components/header/MobileNavigation',
   component: MobileNavigation,
+  decorators: [
+    (Story) => (
+      <div className="flex items-center justify-center">
+        <Story />
+      </div>
+    ),
+  ],
 } as ComponentMeta<typeof MobileNavigation>

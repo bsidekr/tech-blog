@@ -2,7 +2,7 @@ import { Switch, useMantineColorScheme } from '@mantine/core'
 
 import { SunIcon, MoonIcon } from './ColorSchemeToggle.utils'
 
-const ActionToggle = () => {
+export const ActionToggle = () => {
   const { toggleColorScheme } = useMantineColorScheme()
 
   return (
@@ -31,5 +31,3 @@ export const SwitchToggle = () => {
     />
   )
 }
-
-export default ActionToggle
