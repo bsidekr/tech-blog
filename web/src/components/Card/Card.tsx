@@ -4,7 +4,7 @@ import { clsx } from '@mantine/core'
 
 import { Link } from '@redwoodjs/router'
 
-import { ChevronRightIcon } from 'src/components/Icon'
+import { Icon } from 'src/components/Icon'
 
 type CardProps<C extends React.ElementType = 'div'> = {
   as?: C
@@ -83,7 +83,7 @@ Card.Cta = function CardCta({ children }: CardCtaProps) {
       className="cta relative z-10 mt-4 flex items-center text-sm"
     >
       {children}
-      <ChevronRightIcon className="ml-1 stroke-current" size="xs" />
+      <Icon className="ml-1 stroke-current" size="xs" />
     </div>
   )
 }
