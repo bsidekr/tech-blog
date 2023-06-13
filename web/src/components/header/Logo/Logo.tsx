@@ -4,8 +4,8 @@ import { routes } from '@redwoodjs/router'
 import { Link } from '@redwoodjs/router'
 
 export interface LogoProps {
-  large: boolean
-  className: string
+  large?: boolean
+  className?: string
 }
 
 export const LogoContainer = ({ className = '', ...props }) => {

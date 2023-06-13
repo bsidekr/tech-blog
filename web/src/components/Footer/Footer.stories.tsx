@@ -14,9 +14,24 @@ export const generated = () => {
 export const generatedDark = () => {
   return (
     <ColorSchemeWrapper initialScheme="dark">
+      <div className="dark:bg-zinc-900">
+        <Footer />
+      </div>
+    </ColorSchemeWrapper>
+  )
+}
+
+export const mobile = () => {
+  return (
+    <ColorSchemeWrapper>
       <Footer />
     </ColorSchemeWrapper>
   )
+}
+mobile.parameters = {
+  viewport: {
+    defaultViewport: 'mobile1',
+  },
 }
 
 export default {

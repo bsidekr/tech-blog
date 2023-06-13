@@ -11,6 +11,19 @@ export const generated: ComponentStory<typeof BlogLayout> = (args) => {
   )
 }
 
+export const mobile: ComponentStory<typeof BlogLayout> = (args) => {
+  return (
+    <ColorSchemeWrapper>
+      <BlogLayout {...args} />
+    </ColorSchemeWrapper>
+  )
+}
+mobile.parameters = {
+  viewport: {
+    defaultViewport: 'mobile1',
+  },
+}
+
 export default {
   title: 'Layouts/BlogLayout',
   component: BlogLayout,

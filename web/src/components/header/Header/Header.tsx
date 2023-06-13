@@ -1,6 +1,5 @@
-import { Container } from '@mantine/core'
-
 import { useAuth } from 'src/auth'
+import Container from 'src/components/Container'
 
 import { ActionToggle } from '../ColorSchemeToggle/ColorSchemeToggle'
 import Logo, { LogoContainer } from '../Logo/Logo'
@@ -13,14 +12,14 @@ const Header = () => {
   return (
     <header className="relative z-50 flex flex-col">
       <div className="top-0 z-10 h-16 pt-6">
-        <Container className="w-full">
+        <Container>
           <div className="relative flex gap-4">
             <div className="flex flex-1">
               <LogoContainer>
                 <Logo className="px-3 py-2" />
               </LogoContainer>
             </div>
-            <div className="flex flex-1 justify-end md:justify-center md:pt-2">
+            <div className="flex flex-1 items-center justify-end md:justify-center">
               <div>
                 <MobileNavigation className="md:hidden" />
                 <DesktopNavigation className="hidden md:block" />
