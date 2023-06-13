@@ -9,14 +9,9 @@ on:
       - 'main' # for dev
     tags:
       - '**' # for qa
-
-permissions:
-  id-token: write # This is required for requesting the JWT
-  contents: read
-
 jobs:
   setStage:
-    runs-on: [self-hosted]
+    runs-on: ubuntu-latest
     outputs:
       STAGE: ${{ steps.stage1.outputs.STAGE || steps.stage2.outputs.STAGE || steps.stage3.outputs.STAGE }}
 
