@@ -18,10 +18,14 @@
 .rw-scaffold a {
   background-color: transparent;
 }
-.rw-scaffold ul {
+/* .rw-scaffold ul {
   margin: 0;
   padding: 0;
 }
+.rw-scaffold ol {
+  margin: 0;
+  padding: 0;
+} */
 .rw-scaffold input {
   font-family: inherit;
   font-size: 100%;
@@ -394,4 +398,24 @@
   font-size: 150%;
   font-weight: bold;
   margin-bottom: 1rem;
+}
+
+/**
+  * Editor
+*/
+
+.mantine-RichTextEditor-root a {
+  color: #228be6 !important;
+}
+.mantine-RichTextEditor-root ul {
+  list-style: inherit;
+}
+.mantine-RichTextEditor-root ol {
+  list-style: decimal;
+}
+.mantine-RichTextEditor-root iframe {
+  margin: auto;
+}
+.mantine-RichTextEditor-root img {
+  margin: auto;
 }

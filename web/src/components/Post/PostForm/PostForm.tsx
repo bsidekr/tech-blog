@@ -10,6 +10,9 @@ import {
 } from '@redwoodjs/forms'
 import type { RWGqlError } from '@redwoodjs/forms'
 
+import PostEditor from 'src/components/Post/PostEditor'
+import { useTipTapEditor } from 'src/hook/useEditor'
+
 type FormPost = NonNullable<EditPostById['post']>
 
 interface PostFormProps {
@@ -20,7 +23,10 @@ interface PostFormProps {
 }
 
 const PostForm = (props: PostFormProps) => {
+  const editor = useTipTapEditor(props.post.body)
+
   const onSubmit = (data: FormPost) => {
+    data.body = editor.getHTML()
     props.onSave(data, props?.post?.id)
   }
 
@@ -60,13 +66,9 @@ const PostForm = (props: PostFormProps) => {
           Body
         </Label>
 
-        <TextField
-          name="body"
-          defaultValue={props.post?.body}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-          validation={{ required: true }}
-        />
+        <div className="rw-input">
+          <PostEditor editor={editor} />
+        </div>
 
         <FieldError name="body" className="rw-field-error" />
 
