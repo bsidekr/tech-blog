@@ -26,7 +26,7 @@ const AboutPage = () => {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Bside Korea
+              비사이드코리아
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p className="font-medium">
@@ -47,14 +47,13 @@ const AboutPage = () => {
               <p>
                 비사이드코리아는, 21년 9월에 설립된 스타트업이며 자산운용사,
                 소액주주연대와 함께 행동주의 캠페인을 준비하고 실행하는 플랫폼
-                서비스를 제공하고 있습니다. 지난 3월 서비스를 런칭하여
+                서비스를 제공하고 있습니다. 22년 3월 서비스를 런칭하여
                 SM엔터테인먼트, 금호석유화학, 사조산업 등의 캠페인을 진행하였고,
                 현재 국내 7개 은행주, BYC, 포스코 등 11개의 캠페인을
                 진행중입니다. 이중 SM엔터테인먼트의 경우 각종 언론, 공중파,
-                삼프로TV등에 노출되면서 1,200억원 상당의 주식을 위임받아 에스엠
-                주주총회에서 완승을 거두었습니다. 앞으로 비사이드코리아는 증권사
-                연동, 주주 집결력 강화, 기관 매칭 연계를 강화하여 코리아
-                디스카운트를 해결하고자 합니다.
+                삼프로TV등에 노출되면서 에스엠 주주총회에서 완승을 거두었습니다.
+                앞으로 비사이드코리아는 증권사 연동, 주주 집결력 강화, 기관 매칭
+                연계를 강화하여 코리아 디스카운트를 해결하고자 합니다.
               </p>
               <p>비사이드코리아는 작지만, 빠르게 성장하고 있습니다.</p>
               <ul className="list-disc">
