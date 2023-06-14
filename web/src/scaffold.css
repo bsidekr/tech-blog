@@ -58,6 +58,7 @@
 .rw-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem 1rem 2rem;
 }
 .rw-main {
@@ -69,7 +70,6 @@
   border-radius: 0.5rem;
   border-width: 1px;
   border-color: #e5e7eb;
-  overflow: hidden;
   width: 100%;
   scrollbar-color: #a1a1aa transparent;
 }
@@ -188,12 +188,12 @@
   padding: 0.25rem 0.5rem;
   line-height: inherit;
 }
-.rw-button.rw-button-green {
-  background-color: #48bb78;
+.rw-button.rw-button-indigo {
+  background-color: #6366f1;
   color: #fff;
 }
-.rw-button.rw-button-green:hover {
-  background-color: #38a169;
+.rw-button.rw-button-indigo:hover {
+  background-color: #4338ca;
   color: #fff;
 }
 .rw-button.rw-button-blue {
