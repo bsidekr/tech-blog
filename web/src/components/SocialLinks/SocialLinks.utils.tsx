@@ -57,16 +57,16 @@ export const naverBlogSvg = () => {
 export const socialLinks = {
   naverBlog: {
     svg: naverBlogSvg,
-    text: 'Follow on Naver Blog',
+    label: 'Follow on Naver Blog',
     link: 'https://blog.naver.com/bside_kr',
   },
   youtube: {
     svg: youtubeSvg,
-    text: 'Follow on Youtube',
+    label: 'Follow on Youtube',
     link: 'https://www.youtube.com/@activismkr',
   },
   email: {
     icon: EnvelopeIcon,
-    text: 'info@bside.ai',
+    label: 'info@bside.ai',
   },
 }

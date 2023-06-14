@@ -18,9 +18,7 @@ const BlogLayout = ({ children }) => {
       </div>
       <div className="relative">
         <Header />
-        <main className="mx-auto max-w-4xl rounded-b bg-white p-12 shadow">
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </div>
     </div>

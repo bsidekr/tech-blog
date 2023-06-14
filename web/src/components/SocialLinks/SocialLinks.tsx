@@ -6,10 +6,10 @@ interface SocialLinkProps {
   icon?: any
   svg?: any
   link?: string
-  text: string
+  label: string
 }
 
-export const SocialLink = ({ icon, svg, link, text }: SocialLinkProps) => {
+export const SocialLink = ({ icon, svg, link, label }: SocialLinkProps) => {
   return (
     <a
       href={link}
@@ -22,13 +22,13 @@ export const SocialLink = ({ icon, svg, link, text }: SocialLinkProps) => {
       ) : (
         <Icon icon={icon} color="gray" size="md" />
       )}
-      <span className="whitespace-nowrap font-medium">{text}</span>
+      <span className="whitespace-nowrap font-medium">{label}</span>
     </a>
   )
 }
 
 const LinkDivider = () => {
-  return <div className="my-6 h-[1px] bg-gray-100" />
+  return <div className="my-6 h-[1px] bg-gray-100 dark:bg-zinc-700" />
 }
 
 const SocialLinkGroupWrapper = ({ children }) => {
