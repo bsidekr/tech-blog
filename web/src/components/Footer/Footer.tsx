@@ -8,7 +8,7 @@ const Footer = () => {
     <a
       href={link.link}
       key={link.name}
-      className="transition hover:text-teal-500 dark:hover:text-teal-400"
+      className="transition hover:text-purple-500 dark:hover:text-purple-400"
       target="_blank"
       rel="noreferrer"
     >
