@@ -28,6 +28,18 @@ module.exports = {
         gmarket: 'GmarketSansMedium',
         notoSansKr: 'Noto Sans KR',
       },
+      colors: {
+        purple: {
+          100: '#D9C4FF',
+          200: '#CBA8FF',
+          300: '#B07BF4',
+          400: '#9D71FF',
+          500: '#7F57EA',
+          600: '#6C5CD1',
+          700: '#7259DF',
+          800: '#5344ad',
+        },
+      },
     },
     typography: (theme) => ({
       invert: {
