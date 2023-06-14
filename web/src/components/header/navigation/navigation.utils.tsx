@@ -1,16 +1,10 @@
 import {
   DocumentTextIcon,
-  HomeIcon,
   InformationCircleIcon,
-  UserIcon,
+  WrenchScrewdriverIcon,
 } from '@heroicons/react/24/outline'
 
 const navigation = [
-  {
-    label: '홈',
-    name: 'home',
-    icon: HomeIcon,
-  },
   {
     label: '소개',
     name: 'about',
@@ -18,13 +12,13 @@ const navigation = [
   },
   {
     label: '아티클',
-    name: 'articles',
+    name: 'home',
     icon: DocumentTextIcon,
   },
   {
-    label: '문의',
-    name: 'contact',
-    icon: UserIcon,
+    label: '기술',
+    name: 'techspec',
+    icon: WrenchScrewdriverIcon,
   },
 ]
 

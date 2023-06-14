@@ -6,12 +6,12 @@ const links = [
   },
   {
     name: 'service',
-    label: '비사이드 서비스',
+    label: '회사 소개',
     link: 'https://corp.bside.ai/',
   },
   {
     name: 'campaign',
-    label: '모든 캠페인',
+    label: '캠페인',
     link: 'https://bside.ai/',
   },
   {

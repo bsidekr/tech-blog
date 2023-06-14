@@ -1,7 +1,10 @@
 import { useAuth } from 'src/auth'
 import Container from 'src/components/Container'
 
-import { ActionToggle } from '../ColorSchemeToggle/ColorSchemeToggle'
+import {
+  ActionToggle,
+  SwitchToggle,
+} from '../ColorSchemeToggle/ColorSchemeToggle'
 import Logo, { LogoContainer } from '../Logo/Logo'
 import DesktopNavigation from '../navigation/DesktopNavigation/DesktopNavigation'
 import MobileNavigation from '../navigation/MobileNavigation/MobileNavigation'
@@ -24,7 +27,8 @@ const Header = () => {
               <DesktopNavigation className="hidden md:block" />
             </div>
             <div className="flex justify-end md:flex-1">
-              <ActionToggle />
+              <ActionToggle className="md:hidden" />
+              <SwitchToggle className="hidden md:block" />
               {isAuthenticated && (
                 <div className="absolute top-16 flex flex-col items-end gap-2">
                   <button

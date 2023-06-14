@@ -23,10 +23,7 @@ const MobileNavigation = (props) => {
           <ChevronDownIcon className="ml-3 h-4 w-4 stroke-zinc-500 stroke-2 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
         </button>
       </Menu.Target>
-      <Menu.Dropdown>
-        <Menu.Label>메인</Menu.Label>
-        {items}
-      </Menu.Dropdown>
+      <Menu.Dropdown>{items}</Menu.Dropdown>
     </Menu>
   )
 }

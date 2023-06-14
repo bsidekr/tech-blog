@@ -13,7 +13,7 @@ export const LogoContainer = ({ className = '', ...props }) => {
     <div
       className={clsx(
         className,
-        'flex h-12 w-12 items-center justify-center rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10'
+        'flex h-12 w-12 items-center justify-center rounded-full bg-white/90 p-0.5 shadow-lg shadow-purple-800/5 ring-1 ring-purple-900/5 backdrop-blur dark:bg-purple-800/90 dark:ring-white/10'
       )}
       {...props}
     />
@@ -25,7 +25,7 @@ const Logo = ({ large = false, className = '', ...props }: LogoProps) => {
     <Link to={routes.home()} aria-label="Home" className={className} {...props}>
       <svg
         className={clsx(
-          'rounded-full fill-black dark:bg-zinc-800 dark:fill-white',
+          'rounded-full fill-purple-800 dark:bg-purple-700 dark:fill-white',
           large ? 'h-16 w-16' : 'h-12 w-12'
         )}
         viewBox="0 0 61 20"
