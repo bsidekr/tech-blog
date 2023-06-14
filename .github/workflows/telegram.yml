@@ -17,12 +17,13 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
+          format: markdown
           message: |
-            [Author]: ✋ ${{ github.actor }}
-            [Repository]: ${{ github.repository }}
-            [Stage]: ${{ inputs.STAGE }}
-            [Status]: 😎 **Success**
+            Author: ✋ ${{ github.actor }}
+            Repository: ${{ github.repository }}
+            Stage: ${{ inputs.STAGE }}
+            Status: 😎 *Success*
 
-            [Commit message]: ${{ github.event.head_commit.message }}
+            Commit message: ${{ github.event.head_commit.message }}
 
-            [See changes]: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            [See changes](https://github.com/${{ github.repository }}/commit/${{github.sha}})
