@@ -24,10 +24,10 @@
 
 @layer base {
   h1 {
-    @apply font-gmarket text-4xl font-bold text-zinc-800 dark:text-zinc-100 sm:text-5xl;
+    @apply font-gmarket text-4xl font-bold text-purple-800 dark:text-purple-100 sm:text-5xl;
   }
   h2 {
-    @apply font-gmarket text-2xl font-semibold text-zinc-800 dark:text-zinc-100 sm:text-3xl;
+    @apply font-gmarket text-2xl font-semibold text-purple-800 dark:text-purple-100 sm:text-3xl;
   }
   p {
     @apply font-notoSansKr text-base text-zinc-600 dark:text-zinc-400;
