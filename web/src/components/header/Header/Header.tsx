@@ -19,7 +19,7 @@ const Header = () => {
                 <Logo className="px-3 py-2" />
               </LogoContainer>
             </div>
-            <div className="flex flex-1 items-center justify-end md:justify-center">
+            <div className="flex items-center justify-end md:flex-1 md:justify-center">
               <MobileNavigation className="md:hidden" />
               <DesktopNavigation className="hidden md:block" />
             </div>

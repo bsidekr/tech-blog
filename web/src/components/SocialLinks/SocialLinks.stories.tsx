@@ -36,6 +36,6 @@ export default {
   title: 'Components/SocialLinks',
   component: SocialLinks,
   parameters: {
-    componentSubtitle: 'Social Link UI with Icon and text',
+    componentSubtitle: 'Social Link UI with Icon, text, link',
   },
 } as ComponentMeta<typeof SocialLinks>

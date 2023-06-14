@@ -13,7 +13,7 @@ export const SocialLink = ({ icon, svg, link, text }: SocialLinkProps) => {
   return (
     <a
       href={link}
-      className="flex items-center gap-x-2"
+      className="flex items-center gap-x-2 opacity-80 hover:opacity-100"
       target="_blank"
       rel="noreferrer"
     >
@@ -22,7 +22,7 @@ export const SocialLink = ({ icon, svg, link, text }: SocialLinkProps) => {
       ) : (
         <Icon icon={icon} color="gray" size="md" />
       )}
-      <span className="font-medium">{text}</span>
+      <span className="whitespace-nowrap font-medium">{text}</span>
     </a>
   )
 }
