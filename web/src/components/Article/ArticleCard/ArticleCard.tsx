@@ -3,7 +3,7 @@ import { FindArticleListQuery } from 'types/graphql'
 import { routes } from '@redwoodjs/router'
 
 import Card from 'src/components/Card'
-import { intlDateTimeFormat } from 'src/lib/formatters'
+import { cleanHtmlTag, intlDateTimeFormat } from 'src/lib/formatters'
 
 const truncate = (text: string, length: number) => {
   return text.substring(0, length) + '...'
@@ -29,7 +29,9 @@ const ArticleCard = ({ article }: Props) => {
         >
           {formattedDateTime}
         </Card.Eyebrow>
-        <Card.Description>{truncate(article.body, 110)}</Card.Description>
+        <Card.Description>
+          {truncate(cleanHtmlTag(article.body), 110)}
+        </Card.Description>
         <Card.Cta>자세히 보기</Card.Cta>
       </Card>
       <Card.Eyebrow

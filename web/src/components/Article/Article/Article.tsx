@@ -1,8 +1,6 @@
 import { clsx } from '@mantine/core'
 import type { FindArticleListQuery } from 'types/graphql'
 
-import CommentForm from 'src/components/CommentForm'
-import CommentsCell from 'src/components/CommentsCell'
 import { intlDateTimeFormat } from 'src/lib/formatters'
 
 interface Props {
@@ -23,12 +21,12 @@ const Article = ({ article }: Props) => {
         </time>
       </header>
       <Prose className="mt-8">{article.body}</Prose>
-      <div className="mt-12">
+      {/* <div className="mt-12">
         <CommentForm postId={article.id} />
         <div className="mt-12">
           <CommentsCell postId={article.id} />
         </div>
-      </div>
+      </div> */}
     </article>
   )
 }

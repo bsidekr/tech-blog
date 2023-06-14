@@ -23,7 +23,7 @@ interface PostFormProps {
 }
 
 const PostForm = (props: PostFormProps) => {
-  const editor = useTipTapEditor(props.post.body)
+  const editor = useTipTapEditor(props.post ? props.post.body : '')
 
   const onSubmit = (data: FormPost) => {
     data.body = editor.getHTML()

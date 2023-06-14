@@ -72,3 +72,7 @@ export const intlDateTimeFormat = (date: string | Date, option?: object) => {
   else if (typeof date.getMonth === 'function')
     return intlDate.format(date.getTime())
 }
+
+export const cleanHtmlTag = (text: string) => {
+  return text.replace(/<\/?[^>]+(>|$)/g, '')
+}
