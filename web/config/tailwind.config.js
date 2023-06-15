@@ -24,6 +24,9 @@ module.exports = {
       '9xl': ['8rem', { lineHeight: '1' }],
     },
     extend: {
+      screens: {
+        xs: '448px', // NOTE: breakpoint for max-w-md (448px)
+      },
       fontFamily: {
         gmarket: 'GmarketSansMedium',
         notoSansKr: 'Noto Sans KR',
