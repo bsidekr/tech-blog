@@ -16,7 +16,7 @@ export const techStacks: TechStack[] = [
     label: 'RedwoodJs',
     src: 'https://redwoodjs.com/images/diecut.svg',
     description: 'Focus on building your startup, not fighting your framework.',
-    link: 'redwoodjs.com',
+    link: 'https://redwoodjs.com/',
   },
   {
     categories: ['Web'],

@@ -14,8 +14,8 @@ const NavItem = ({ href, children }) => {
         className={clsx(
           'relative block px-3 py-2 transition',
           isActive
-            ? '!text-purple-400 dark:text-purple-200'
-            : 'hover:text-purple-400 dark:hover:text-purple-200'
+            ? '!text-purple-500 dark:!text-purple-200'
+            : 'hover:text-purple-500 dark:hover:text-purple-200'
         )}
       >
         {children}

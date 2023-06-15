@@ -1,4 +1,4 @@
-import { useMantineColorScheme } from '@mantine/core'
+import { clsx, useMantineColorScheme } from '@mantine/core'
 
 import { Toaster } from '@redwoodjs/web/toast'
 
@@ -9,8 +9,8 @@ const BlogLayout = ({ children }) => {
   const { colorScheme } = useMantineColorScheme()
 
   return (
-    <div className={colorScheme}>
-      <div className="bg-zinc-50 dark:bg-black">
+    <div className={clsx(colorScheme)}>
+      <div className="h-full min-h-screen bg-zinc-50 dark:bg-black">
         <Toaster />
         <div className="fixed inset-0 flex justify-center sm:px-8">
           <div className="flex w-full max-w-7xl">

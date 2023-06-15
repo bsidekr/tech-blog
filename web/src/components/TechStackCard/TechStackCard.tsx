@@ -26,9 +26,11 @@ const TechStackCard = ({
         </Card.Link>
       </h2>
       <Card.Description>{description}</Card.Description>
-      <p className="relative z-10 mt-6 flex items-center text-sm font-medium text-zinc-400 transition group-hover:text-purple-500 dark:text-zinc-200">
+      <p className="relative z-10 mt-6 flex items-center text-sm font-medium text-zinc-400 transition group-hover:text-purple-500 dark:text-zinc-200 dark:group-hover:text-purple-300">
         <LinkIcon className="h-4 w-4 flex-none stroke-2" />
-        <span className="ml-2">{link}</span>
+        <span className="ml-2">
+          {link.replace(/^https?:\/\/(.+?)\/?$/, '$1')}
+        </span>
       </p>
     </Card>
   )

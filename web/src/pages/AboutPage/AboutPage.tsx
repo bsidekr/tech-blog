@@ -14,13 +14,13 @@ const AboutPage = () => {
             <div className="max-w-xs px-2.5 lg:max-w-none">
               <img
                 src="https://pocky-production-s3.s3.ap-northeast-2.amazonaws.com/uploads/files/about"
-                alt=""
-                className="hidden max-w-lg rotate-3 rounded-2xl object-contain dark:block"
+                alt="bside korea app"
+                className="hidden rotate-3 rounded-2xl object-contain dark:block xs:max-w-lg"
               />
               <img
                 src="https://pocky-production-s3.s3.ap-northeast-2.amazonaws.com/uploads/files/about_light"
-                alt=""
-                className="max-w-lg rotate-3 rounded-2xl object-contain dark:hidden"
+                alt="bside korea app"
+                className="rotate-3 rounded-2xl object-contain dark:hidden xs:max-w-lg"
               />
             </div>
           </div>
@@ -28,10 +28,10 @@ const AboutPage = () => {
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               비사이드코리아
             </h1>
-            <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
-              <p className="font-medium">
-                &quot;회사의 매출은 오르는데 왜 내 주식은 그대로인가요?&quot;
-              </p>
+            <p className="my-16 font-medium text-zinc-800 dark:text-zinc-200">
+              &quot;회사의 매출은 오르는데 왜 내 주식은 그대로인가요?&quot;
+            </p>
+            <div className="my-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
                 한국 경제는 항상 &apos;코리아 디스카운트&apos;라는 저평가의 늪에
                 빠져 있습니다. 제일 큰 요인은 ESG중 G에 해당하는 한국의
@@ -71,10 +71,20 @@ const AboutPage = () => {
                   훌륭한 어드바이저 분들과 긴밀하게 협업하고 있습니다.
                 </li>
               </ul>
-              <p className="font-medium">
-                행동하는 주주 커뮤니티 플랫폼, 비사이드코리아
-              </p>
             </div>
+            <p className="my-16 font-medium text-zinc-800 dark:text-zinc-200">
+              <a
+                href="https://www.bside.ai"
+                className="my-16 font-medium"
+                target="_blank"
+                rel="noreferrer"
+              >
+                행동하는 주주 커뮤니티 플랫폼,
+                <span className="ml-2 !text-purple-600 hover:!text-purple-400 dark:!text-purple-200 dark:hover:!text-purple-300">
+                  비사이드코리아
+                </span>
+              </a>
+            </p>
           </div>
           <div className="lg:pl-20">
             <SocialLinks />
