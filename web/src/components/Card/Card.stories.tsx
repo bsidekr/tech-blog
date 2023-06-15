@@ -1,3 +1,4 @@
+import { LinkIcon } from '@heroicons/react/24/outline'
 import type { ComponentMeta } from '@storybook/react'
 
 import { routes } from '@redwoodjs/router'
@@ -58,7 +59,8 @@ export const techStackCard = () => {
         <Card.Description>
           Focus on building your startup, not fighting your framework.
         </Card.Description>
-        <p className="relative z-10 mt-6 flex transition group-hover:text-purple-500">
+        <p className="relative z-10 mt-6 flex items-center text-sm font-medium text-zinc-400 transition group-hover:text-purple-500 dark:text-zinc-200">
+          <LinkIcon className="h-4 w-4 flex-none stroke-2" />
           <span className="ml-2">redwoodjs.com</span>
         </p>
       </Card>
