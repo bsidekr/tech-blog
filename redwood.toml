@@ -5,6 +5,17 @@
 # For the full list of options, see the "App Configuration: redwood.toml" doc:
 # https://redwoodjs.com/docs/app-configuration-redwood-toml
 
+# For Coherence
+#[web]
+#  host = "0.0.0.0"
+#  bundler = "vite"
+#  title = "Bside Korea"
+#  port = "${PORT:8910}"
+#  apiUrl = "/api"
+#  includeEnvironmentVariables = [] # any ENV vars that should be available to the web side, see https://redwoodjs.com/docs/environment-variables#web
+#[api]
+#  host = "0.0.0.0"
+#  port = "${PORT:8911}"
 [web]
   bundler = "vite"
   title = "Bside Korea"
