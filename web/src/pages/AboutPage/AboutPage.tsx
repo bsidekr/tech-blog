@@ -56,7 +56,7 @@ const AboutPage = () => {
                 연계를 강화하여 코리아 디스카운트를 해결하고자 합니다.
               </p>
               <p>비사이드코리아는 작지만, 빠르게 성장하고 있습니다.</p>
-              <ul className="list-disc">
+              <ul className="list-disc pl-4">
                 <li>
                   법인 설립한 지 1년도 채 되지 않아, 행동주의 전략을 수행하는
                   국내 top tier 자산운용사로부터 seed와 후속 투자를 성공적으로

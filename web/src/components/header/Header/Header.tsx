@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <header className="relative z-50 flex flex-col">
-      <div className="top-0 z-10 h-16 pt-6">
+      <div className="top-0 z-10 h-16 pt-6 md:pt-10">
         <Container>
           <div className="relative flex gap-4">
             <div className="flex flex-1">
@@ -26,7 +26,7 @@ const Header = () => {
               <MobileNavigation className="md:hidden" />
               <DesktopNavigation className="hidden md:block" />
             </div>
-            <div className="flex justify-end md:flex-1">
+            <div className="flex items-center justify-end md:flex-1">
               <ActionToggle className="md:hidden" />
               <SwitchToggle className="hidden md:block" />
               {isAuthenticated && (

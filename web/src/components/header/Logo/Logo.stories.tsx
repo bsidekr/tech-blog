@@ -1,7 +1,7 @@
 import type { ComponentMeta } from '@storybook/react'
 import { ColorSchemeWrapper } from 'config/storybook.preview'
 
-import Logo, { LogoContainer, LogoProps } from './Logo'
+import Logo, { CircularLogo, LogoContainer, LogoProps } from './Logo'
 
 export const Generated = (args: LogoProps) => {
   return (
@@ -17,6 +17,17 @@ export const GeneratedDark = (args: LogoProps) => {
       <Logo {...args} />
     </ColorSchemeWrapper>
   )
+}
+GeneratedDark.parameters = {
+  backgrounds: {
+    default: 'dark',
+    values: [
+      {
+        name: 'dark',
+        value: '#333333',
+      },
+    ],
+  },
 }
 
 export const Wrapped = (args: LogoProps) => {
@@ -41,6 +52,14 @@ export const WrappedDark = (args: LogoProps) => {
       <LogoContainer>
         <Logo {...args} />
       </LogoContainer>
+    </ColorSchemeWrapper>
+  )
+}
+
+export const Circular = (args: LogoProps) => {
+  return (
+    <ColorSchemeWrapper initialScheme="dark">
+      <CircularLogo {...args} />
     </ColorSchemeWrapper>
   )
 }
