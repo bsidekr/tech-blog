@@ -1,6 +1,6 @@
 datasource db {
-  provider = "sqlite"
-  // provider = "postgresql"  // for coherence
+  // provider = "sqlite"
+  provider = "postgresql" // for coherence
   url      = env("DATABASE_URL")
 }
 
