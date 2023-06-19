@@ -22,7 +22,7 @@ export const techStacks: TechStack[] = [
     categories: ['Web'],
     label: 'React',
     src: 'https://legacy.reactjs.org/favicon.ico',
-    description: 'Focus on building your startup, not fighting your framework.',
+    description: 'The library for web and native user interfaces',
     link: 'https://react.dev/',
   },
   {
@@ -61,14 +61,16 @@ export const techStacks: TechStack[] = [
     categories: ['Web'],
     label: 'Storybook',
     src: 'https://storybook.js.org/images/logos/icon-storybook.png',
-    description: 'Focus on building your startup, not fighting your framework.',
+    description:
+      'Storybook is a frontend workshop for building UI components and pages in isolation. Thousands of teams use it for UI development, testing, and documentation. It’s open source and free.',
     link: 'https://storybook.js.org/',
   },
   {
     categories: ['Web'],
     label: 'TailwindCSS',
     src: 'https://tailwindcss.com/favicons/apple-touch-icon.png?v=3',
-    description: 'Focus on building your startup, not fighting your framework.',
+    description:
+      'Rapidly build modern websites without ever leaving your HTML.',
     link: 'https://tailwindcss.com/',
   },
   {
