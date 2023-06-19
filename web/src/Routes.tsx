@@ -9,9 +9,9 @@ const Routes = () => {
   return (
     <Router useAuth={useAuth}>
       <Route path="/login" page={LoginPage} name="login" />
-      {/* <Route path="/signup" page={SignupPage} name="signup" />
+      <Route path="/signup" page={SignupPage} name="signup" />
       <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
-      <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" /> */}
+      <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
       <Private unauthenticated="home" roles="admin">
         <Set wrap={ScaffoldLayout} title="Posts" titleTo="posts" buttonLabel="New Post" buttonTo="newPost">
           <Route path="/admin/posts/new" page={PostNewPostPage} name="newPost" />
@@ -21,7 +21,7 @@ const Routes = () => {
         </Set>
       </Private>
       <Set wrap={BlogLayout}>
-        <Route path="/articles/{id:Int}" page={ArticlePage} name="article" prerender />
+        <Route path="/articles/{id:Int}" page={ArticlePage} name="article" />
         <Route path="/" page={ArticleListPage} name="home" />
         <Route path="/tech" page={TechPage} name="techspec" />
         <Route path="/about" page={AboutPage} name="about" />
