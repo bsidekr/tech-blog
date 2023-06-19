@@ -1,121 +1,56 @@
-# README
+# Dev blog
 
-Welcome to [RedwoodJS](https://redwoodjs.com)!
+Bside Dev Blog - Code Refactoring using RedwoodJs
 
-> **Prerequisites**
->
-> - Redwood requires [Node.js](https://nodejs.org/en/) (>=18.x) and [Yarn](https://yarnpkg.com/) (>=1.15)
-> - Are you on Windows? For best results, follow our [Windows development setup](https://redwoodjs.com/docs/how-to/windows-development-setup) guide
+## Overview
 
-Start by installing dependencies:
+After using RedwoodJs from version 1 for a period of 6 months, as the project grew, it became necessary to review and improve the code. To achieve this, we plan to create a small project and gradually apply new features and improvements that we have been wanting to implement during development. The insights gained from this project will be integrated into the main project code.
 
-```
-yarn install
-```
+## Key Objectives
 
-Then change into that directory and start the development server:
+- Build: Test the Vite build tool.
+- Style: Establish a new design system for the web.
+- TDD: Revive and integrate Storybook, Jest, and Cypress, which have been neglected, and connect them with GitHub Actions.
+- Admin: Create an admin dashboard using Tremor and develop an Editor.
+- Infra: Test the possibility of migrating to a new deployment method.
+- Monitoring: Implement error catching and performance tracking dashboards using RW Studio.
 
-```
-cd my-redwood-project
-yarn redwood dev
-```
+## Details
 
-Your browser should automatically open to http://localhost:8910 where you'll see the Welcome Page, which links to many great resources.
+### 1. Build: Test the Vite build tool
 
-> **The Redwood CLI**
->
-> Congratulations on running your first Redwood CLI command!
-> From dev to deploy, the CLI is with you the whole way.
-> And there's quite a few commands at your disposal:
-> ```
-> yarn redwood --help
-> ```
-> For all the details, see the [CLI reference](https://redwoodjs.com/docs/cli-commands).
+The Vite build tool was successfully applied in the development environment without major issues. However, there is an issue where the tailwind config is not being read in the build environment. To resolve this issue, it is necessary to switch to webpack specifically for the build process.
 
-## Prisma and the database
+### 2. Style: Establish a new design system for the web
 
-Redwood wouldn't be a full-stack framework without a database. It all starts with the schema. Open the [`schema.prisma`](api/db/schema.prisma) file in `api/db` and replace the `UserExample` model with the following `Post` model:
+One of the drawbacks of using TailwindCSS is that it can be challenging to read due to its purpose of "writing CSS alongside HTML." Especially since the design system is not yet complete, it requires creating an excessive number of components, leading to a lack of consistency. This situation makes it challenging to highlight the advantages of TailwindCSS effectively.
 
-```
-model Post {
-  id        Int      @id @default(autoincrement())
-  title     String
-  body      String
-  createdAt DateTime @default(now())
-}
-```
+We have decided to introduce Mantine and Tremor into the code. Both frameworks are officially supported by RedwoodJs and offer the benefits of being headless while being compatible with TailwindCSS. Although some components required consolidation due to overlap, the development productivity has significantly improved.
 
-Redwood uses [Prisma](https://www.prisma.io/), a next-gen Node.js and TypeScript ORM, to talk to the database. Prisma's schema offers a declarative way of defining your app's data models. And Prisma [Migrate](https://www.prisma.io/migrate) uses that schema to make database migrations hassle-free:
+### 3. TDD: Test-Driven Development
 
-```
-yarn rw prisma migrate dev
+#### Storybook
 
-# ...
+Initially, we attempted to use Storybook to test and showcase every component and page. However, this approach increased the maintenance cost and made UI development less enjoyable. To address this, we limit the use of Storybook to the basic UI tokens, components, and layouts. We will selectively utilize it for responsive design, dark theme, and testing in different language environments.
 
-? Enter a name for the new migration: › create posts
-```
+#### Jest
 
-> `rw` is short for `redwood`
+We plan to follow the updated official RedwoodJs documentation for Jest.
 
-You'll be prompted for the name of your migration. `create posts` will do.
+#### Cypress
 
-Now let's generate everything we need to perform all the CRUD (Create, Retrieve, Update, Delete) actions on our `Post` model:
+While Cypress provides a strong sense of stability when tests pass, it is susceptible to updates. Until our internal design system stabilizes, we have decided not to use Cypress. Instead, we will focus on using React Testing Library for some of the testing needs.
 
-```
-yarn redwood g scaffold post
-```
+### 4. Admin
 
-Navigate to http://localhost:8910/posts/new, fill in the title and body, and click "Save":
+We are reconstructing the admin section based on the RedwoodJs scaffold with Mantine and Tremor. We need to carefully consider the integration of tables with GraphQL. In terms of graphs and numerical representations, there may be some limitations compared to d3. However, with careful planning and product design considerations, we believe it can provide sufficient value to customers even as a simple admin section.
 
-Did we just create a post in the database? Yup! With `yarn rw g scaffold <model>`, Redwood created all the pages, components, and services necessary to perform all CRUD actions on our posts table.
+### 5. Infra
 
-## Frontend first with Storybook
+Coherence, a framework similar to Terraform, has been officially supported and announced for collaboration with RedwoodJs. It is said to offer an experience similar to Netlify, allowing for the continued use of AWS accounts and credits, although it may not provide a fully comprehensive lambda-based serverless environment.
 
-Don't know what your data models look like?
-That's more than ok—Redwood integrates Storybook so that you can work on design without worrying about data.
-Mockup, build, and verify your React components, even in complete isolation from the backend:
+Despite some opposing views internally, we are cautiously approaching this new infrastructure option. We are focusing on highlighting the benefits of development cost.
 
-```
-yarn rw storybook
-```
+### 6. Monitoring
 
-Before you start, see if the CLI's `setup ui` command has your favorite styling library:
-
-```
-yarn rw setup ui --help
-```
-
-## Testing with Jest
-
-It'd be hard to scale from side project to startup without a few tests.
-Redwood fully integrates Jest with the front and the backends and makes it easy to keep your whole app covered by generating test files with all your components and services:
-
-```
-yarn rw test
-```
-
-To make the integration even more seamless, Redwood augments Jest with database [scenarios](https://redwoodjs.com/docs/testing.md#scenarios)  and [GraphQL mocking](https://redwoodjs.com/docs/testing.md#mocking-graphql-calls).
-
-## Ship it
-
-Redwood is designed for both serverless deploy targets like Netlify and Vercel and serverful deploy targets like Render and AWS:
-
-```
-yarn rw setup deploy --help
-```
-
-Don't go live without auth!
-Lock down your front and backends with Redwood's built-in, database-backed authentication system ([dbAuth](https://redwoodjs.com/docs/authentication#self-hosted-auth-installation-and-setup)), or integrate with nearly a dozen third party auth providers:
-
-```
-yarn rw setup auth --help
-```
-
-## Next Steps
-
-The best way to learn Redwood is by going through the comprehensive [tutorial](https://redwoodjs.com/docs/tutorial/foreword) and joining the community (via the [Discourse forum](https://community.redwoodjs.com) or the [Discord server](https://discord.gg/redwoodjs)).
-
-## Quick Links
-
-- Stay updated: read [Forum announcements](https://community.redwoodjs.com/c/announcements/5), follow us on [Twitter](https://twitter.com/redwoodjs), and subscribe to the [newsletter](https://redwoodjs.com/newsletter)
-- [Learn how to contribute](https://redwoodjs.com/docs/contributing)
+While Redwood studio are still in the experimental phase, there isn't much specific features to test at the moment. However, we are excited about the possibilities.
