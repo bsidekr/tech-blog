@@ -47,7 +47,6 @@ const PostForm = (props: PostFormProps) => {
         >
           Title
         </Label>
-
         <TextField
           name="title"
           defaultValue={props.post?.title}
@@ -55,8 +54,11 @@ const PostForm = (props: PostFormProps) => {
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
         />
-
         <FieldError name="title" className="rw-field-error" />
+
+        <Label name="생성일시" />
+        <TextField name="createdAt" defaultValue={props.post?.createdAt} className="rw-input color-input text-lg" />
+        <FieldError name="createdAt" className="rw-field-error" />
 
         <Label
           name="body"
@@ -65,11 +67,9 @@ const PostForm = (props: PostFormProps) => {
         >
           Body
         </Label>
-
         <div className="rw-input">
           <PostEditor editor={editor} />
         </div>
-
         <FieldError name="body" className="rw-field-error" />
 
         <div className="rw-button-group">
