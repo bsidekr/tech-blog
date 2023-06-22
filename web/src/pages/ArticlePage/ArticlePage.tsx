@@ -1,7 +1,6 @@
 import { ArrowLeftIcon } from '@heroicons/react/24/outline'
 
 import { back } from '@redwoodjs/router'
-import { MetaTags } from '@redwoodjs/web'
 
 import ArticleCell from 'src/components/Article/ArticleCell'
 import Container from 'src/components/Container/Container'
@@ -13,10 +12,6 @@ interface Props {
 const ArticlePage = ({ id }: Props) => {
   return (
     <>
-      <MetaTags
-        title="Article"
-        description="All of our long-form thoughts on programming, leadership, product design, and more, collected in chronological order."
-      />
       <Container className="mt-16 lg:mt-32">
         <div className="xl:relative">
           <div className="mx-auto max-w-2xl">

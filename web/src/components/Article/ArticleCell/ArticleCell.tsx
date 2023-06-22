@@ -1,6 +1,10 @@
 import type { FindArticleQuery, FindArticleQueryVariables } from 'types/graphql'
 
-import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
+import {
+  type CellSuccessProps,
+  type CellFailureProps,
+  MetaTags,
+} from '@redwoodjs/web'
 
 import Article from '../Article/Article'
 
@@ -31,5 +35,18 @@ export const Failure = ({
 export const Success = ({
   article,
 }: CellSuccessProps<FindArticleQuery, FindArticleQueryVariables>) => {
-  return <Article article={article} />
+  return (
+    <>
+      <MetaTags
+        title={article.title}
+        description={article.body}
+        author={article.user.name}
+        locale={'ko'}
+        // ogContentUrl={article.imgPath}
+        // ogWidth={'1200'}
+        // ogHeight={'900'}
+      />
+      <Article article={article} />
+    </>
+  )
 }
