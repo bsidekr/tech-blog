@@ -27,7 +27,14 @@ const PostForm = (props: PostFormProps) => {
 
   const onSubmit = (data: FormPost) => {
     data.body = editor.getHTML()
+    data.thumbnail = findFirstImgTag(data.body)
     props.onSave(data, props?.post?.id)
+  }
+
+  const findFirstImgTag = (html: string) => {
+    const result = RegExp(`<img[^>]*src="([^"]+)"[^>]*>`).exec(html)
+    if (result == null) return ''
+    return result[1]
   }
 
   return (
