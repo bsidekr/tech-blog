@@ -9,7 +9,7 @@
 [web]
   host = "0.0.0.0"
   bundler = "webpack"
-  title = "Bside Korea"
+  title = "비사이드코리아"
   port = "${PORT:8910}"
   apiUrl = "/api"
   includeEnvironmentVariables = ['STAGE', 'API_URL'] # any ENV vars that should be available to the web side, see https://redwoodjs.com/docs/environment-variables#web

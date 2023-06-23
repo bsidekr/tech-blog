@@ -15,6 +15,7 @@ export const QUERY = gql`
       title
       body
       createdAt
+      thumbnail
       user {
         name
       }
@@ -35,6 +36,7 @@ export const Failure = ({
 export const Success = ({
   article,
 }: CellSuccessProps<FindArticleQuery, FindArticleQueryVariables>) => {
+  console.log(article)
   return (
     <>
       <MetaTags
@@ -42,9 +44,9 @@ export const Success = ({
         description={article.body}
         author={article.user.name}
         locale={'ko'}
-        // ogContentUrl={article.imgPath}
-        // ogWidth={'1200'}
-        // ogHeight={'900'}
+        ogContentUrl={article.thumbnail}
+        ogWidth={'1200'}
+        ogHeight={'900'}
       />
       <Article article={article} />
     </>
