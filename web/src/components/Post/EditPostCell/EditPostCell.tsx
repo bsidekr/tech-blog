@@ -14,6 +14,7 @@ export const QUERY = gql`
       title
       body
       createdAt
+      thumbnail
     }
   }
 `
@@ -24,6 +25,7 @@ const UPDATE_POST_MUTATION = gql`
       title
       body
       createdAt
+      thumbnail
     }
   }
 `

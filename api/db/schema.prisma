@@ -11,12 +11,17 @@ generator client {
 
 model Post {
   id        Int       @id @default(autoincrement())
-  title     String
-  body      String
   createdAt DateTime  @default(now())
-  comments  Comment[]
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+
+  title     String @default("")
+  body      String @default("")
+  thumbnail String @default("")
+
   user      User      @relation(fields: [userId], references: [id])
   userId    Int
+
+  comments  Comment[]
 }
 
 model Contact {
