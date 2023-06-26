@@ -16,6 +16,10 @@
   port = 8888
 
 [[redirects]]
+  from = "/rss.xml"
+  to = "./netlify/functions/rss"
+
+[[redirects]]
   from = "/*"
   to = "/200.html"
   status = 200

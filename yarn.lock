@@ -9168,6 +9168,7 @@ __metadata:
     "@redwoodjs/api": 5.3.1
     "@redwoodjs/auth-dbauth-api": 5.3.1
     "@redwoodjs/graphql-server": 5.3.1
+    feed: ^4.2.2
   languageName: unknown
   linkType: soft
 
@@ -14409,6 +14410,15 @@ __metadata:
     setimmediate: ^1.0.5
     ua-parser-js: ^0.7.30
   checksum: 6c605d038d6852f0199a333e0b7f1f3e2602eebd0b815fba505f641912610007a0a8419222909e17ad0e07365d3b8a0bf45cacf9b43366dde0e95e5ced251632
+  languageName: node
+  linkType: hard
+
+"feed@npm:^4.2.2":
+  version: 4.2.2
+  resolution: "feed@npm:4.2.2"
+  dependencies:
+    xml-js: ^1.6.11
+  checksum: c0849bde569da94493224525db00614fd1855a5d7c2e990f6e8637bd0298e85c3d329efe476cba77e711e438c3fb48af60cd5ef0c409da5bcd1f479790b0a372
   languageName: node
   linkType: hard
 
@@ -23389,6 +23399,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sax@npm:^1.2.4":
+  version: 1.2.4
+  resolution: "sax@npm:1.2.4"
+  checksum: 6e9b05ff443ee5e5096ce92d31c0740a20d33002fad714ebcb8fc7a664d9ee159103ebe8f7aef0a1f7c5ecacdd01f177f510dff95611c589399baf76437d3fe3
+  languageName: node
+  linkType: hard
+
 "saxes@npm:^6.0.0":
   version: 6.0.0
   resolution: "saxes@npm:6.0.0"
@@ -27224,6 +27241,17 @@ __metadata:
   version: 3.0.0
   resolution: "xdg-basedir@npm:3.0.0"
   checksum: c3be36400d8a69c9154ce6ccff98832dae0d04f8bacda806f609d3955beb23dc7c9dde724438b81e6128bf253d440a2bfe0239dd37d70333ab625c4e170b77b2
+  languageName: node
+  linkType: hard
+
+"xml-js@npm:^1.6.11":
+  version: 1.6.11
+  resolution: "xml-js@npm:1.6.11"
+  dependencies:
+    sax: ^1.2.4
+  bin:
+    xml-js: ./bin/cli.js
+  checksum: c83631057f10bf90ea785cee434a8a1a0030c7314fe737ad9bf568a281083b565b28b14c9e9ba82f11fc9dc582a3a907904956af60beb725be1c9ad4b030bc5a
   languageName: node
   linkType: hard
 
