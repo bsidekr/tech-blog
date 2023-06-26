@@ -45,7 +45,7 @@ export const timeTag = (dateTime?: string) => {
   if (dateTime) {
     output = (
       <time dateTime={dateTime} title={dateTime}>
-        {new Date(dateTime).toUTCString()}
+        {new Date(dateTime).toISOString().split('T')[0]}
       </time>
     )
   }

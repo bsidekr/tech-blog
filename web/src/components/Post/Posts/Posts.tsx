@@ -51,8 +51,8 @@ const PostsList = ({ posts }: FindPosts) => {
           {posts.map((post) => (
             <tr key={post.id}>
               <td>{truncate(post.title)}</td>
-              <td>{truncate(post.body)}</td>
-              <td>{timeTag(post.createdAt)}</td>
+              <td>{truncate(post.summary)}</td>
+              <td className="whitespace-nowrap">{timeTag(post.createdAt)}</td>
               <td>
                 <nav className="rw-table-actions">
                   <Link

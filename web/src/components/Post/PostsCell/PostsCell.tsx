@@ -10,7 +10,7 @@ export const QUERY = gql`
     posts {
       id
       title
-      body
+      summary
       createdAt
     }
   }
