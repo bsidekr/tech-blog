@@ -15,6 +15,7 @@ model Post {
   updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
 
   title     String @default("")
+  summary String @default("")
   body      String @default("")
   thumbnail String @default("")
 

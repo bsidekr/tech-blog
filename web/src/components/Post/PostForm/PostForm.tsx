@@ -12,6 +12,7 @@ import type { RWGqlError } from '@redwoodjs/forms'
 
 import PostEditor from 'src/components/Post/PostEditor'
 import { useTipTapEditor } from 'src/hook/useEditor'
+import { cleanHtmlTag, truncate } from 'src/lib/formatters'
 
 type FormPost = NonNullable<EditPostById['post']>
 
@@ -27,6 +28,7 @@ const PostForm = (props: PostFormProps) => {
 
   const onSubmit = (data: FormPost) => {
     data.body = editor.getHTML()
+    data.summary = truncate(cleanHtmlTag(data.body))
     data.thumbnail = findFirstImgTag(data.body)
     props.onSave(data, props?.post?.id)
   }

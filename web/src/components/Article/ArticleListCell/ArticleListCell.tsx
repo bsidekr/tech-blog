@@ -6,13 +6,18 @@ import type {
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 
 import ArticleCard from 'src/components/Article/ArticleCard/ArticleCard'
+import { cacheFirst } from 'src/graphql/cache'
+
+export const beforeQuery = (props) => {
+  return { variables: props, ...cacheFirst }
+}
 
 export const QUERY = gql`
   query FindArticleListQuery {
     articles: posts {
       id
       title
-      body
+      summary
       createdAt
       user {
         name

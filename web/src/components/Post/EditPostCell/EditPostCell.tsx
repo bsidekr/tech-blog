@@ -13,6 +13,7 @@ export const QUERY = gql`
       id
       title
       body
+      summary
       createdAt
       thumbnail
     }
@@ -24,6 +25,7 @@ const UPDATE_POST_MUTATION = gql`
       id
       title
       body
+      summary
       createdAt
       thumbnail
     }

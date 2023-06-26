@@ -74,5 +74,5 @@ export const intlDateTimeFormat = (date: string | Date, option?: object) => {
 }
 
 export const cleanHtmlTag = (text: string) => {
-  return text.replace(/<\/?[^>]+(>|$)/g, '')
+  return text.replaceAll('&nbsp;', ' ').replace(/<\/?[^>]+(>|$)/g, '')
 }
