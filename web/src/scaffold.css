@@ -230,6 +230,9 @@
 .rw-label {
   display: block;
   margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
   color: #4a5568;
   font-weight: 600;
   text-align: left;
@@ -240,7 +243,10 @@
 .rw-input {
   display: block;
   margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
+  max-width: 800px;
   padding: 0.5rem;
   border-width: 1px;
   border-style: solid;

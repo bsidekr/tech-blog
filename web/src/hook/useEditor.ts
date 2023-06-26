@@ -31,6 +31,7 @@ export const useTipTapEditor = (content: string) => {
             left: event.clientX,
             top: event.clientY,
           })
+          if (res[0] == null) return true
           const node = schema.nodes.image.create({ src: res[0].file?.url })
           const transaction = view.state.tr.insert(coordinates.pos, node)
           return view.dispatch(transaction)
@@ -64,9 +65,17 @@ function uploadsWithValidation(files: FileList) {
 function validateImage(file: File) {
   // check valid image type under 10MB
   const filesize = +(file.size / 1048576).toFixed(4) // get the filesize in MB, 1024*1024=1048576
-  return (
-    (file.type === 'image/jpeg' || file.type === 'image/png') && filesize < 10
-  )
+  const result =
+    (file.type === 'image/jpeg' ||
+      file.type === 'image/png' ||
+      file.type === 'image/webp') &&
+    filesize < 10
+  if (!result) {
+    alert(
+      '파일 형식이나 사이즈를 다시 한번 확인해주세요.\n지원형식: jpeg, png, webp, 10MB이하'
+    )
+  }
+  return result
 }
 
 function uploadImage(file: File) {
