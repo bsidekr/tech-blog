@@ -20,7 +20,7 @@ const Routes = () => {
           <Route path="/admin/posts" page={PostPostsPage} name="posts" />
         </Set>
       </Private>
-      <Set wrap={BlogLayout}>
+      <Set wrap={BlogLayout} prerender>
         <Route path="/articles/{id:Int}" page={ArticlePage} name="article" />
         <Route path="/" page={ArticleListPage} name="home" />
         <Route path="/tech" page={TechPage} name="techspec" />
