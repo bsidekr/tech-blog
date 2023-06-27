@@ -1,3 +1,4 @@
+import { Skeleton } from '@mantine/core'
 import type {
   FindArticleListQuery,
   FindArticleListQueryVariables,
@@ -26,7 +27,23 @@ export const QUERY = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => (
+  <div className="flex max-w-3xl flex-col space-y-16">
+    {[...Array(7)].map((x, i) => (
+      <div className="md:grid md:grid-cols-4 md:items-start" key={i}>
+        <div className="hidden px-4 md:block">
+          <Skeleton height={8} radius="xl" />
+        </div>
+        <div className="md:col-span-3">
+          <Skeleton height={16} radius="xl" />
+          <Skeleton height={8} mt={12} radius="xl" />
+          <Skeleton height={8} mt={6} radius="xl" />
+          <Skeleton height={8} mt={6} radius="xl" />
+        </div>
+      </div>
+    ))}
+  </div>
+)
 
 export const Empty = () => <div>Empty</div>
 
