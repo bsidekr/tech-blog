@@ -14,6 +14,7 @@ export const QUERY = gql`
       id
       title
       body
+      summary
       createdAt
       thumbnail
       user {
@@ -41,7 +42,7 @@ export const Success = ({
     <>
       <MetaTags
         title={article.title}
-        description={article.body}
+        description={article.summary}
         author={article.user.name}
         locale={'ko'}
         ogContentUrl={article.thumbnail}

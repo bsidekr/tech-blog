@@ -1,10 +1,10 @@
 import { clsx } from '@mantine/core'
-import type { FindArticleListQuery } from 'types/graphql'
+import type { FindArticleQuery } from 'types/graphql'
 
 import { intlDateTimeFormat } from 'src/lib/formatters'
 
 interface Props {
-  article: FindArticleListQuery['articles'][0]
+  article: FindArticleQuery['article']
 }
 
 const Article = ({ article }: Props) => {
