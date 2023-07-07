@@ -20,6 +20,10 @@
   to = "/.netlify/functions/rss"
 
 [[redirects]]
+  from = "/articles"
+  to = "/articles.html"
+
+[[redirects]]
   from = "/*"
   to = "/200.html"
   status = 200
