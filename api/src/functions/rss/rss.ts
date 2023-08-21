@@ -75,5 +75,5 @@ const addPostsToFeed = (posts: postItems[], feed: Feed) => {
     })
   )
 
-  feed.addCategory('Technologie')
+  feed.addCategory('Technology')
 }

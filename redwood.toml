@@ -11,7 +11,7 @@
   bundler = "webpack"
   title = "비사이드코리아"
   port = "${PORT:8910}"
-  apiUrl = "/.netlify/functions"
+  apiUrl = "/api"
   includeEnvironmentVariables = ['STAGE', 'API_URL'] # any ENV vars that should be available to the web side, see https://redwoodjs.com/docs/environment-variables#web
 [api]
   host = "0.0.0.0"
