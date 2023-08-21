@@ -24,7 +24,7 @@ const App = () => {
 
   return (
     <FatalErrorBoundary page={FatalErrorPage}>
-      <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
+      <RedwoodProvider titleTemplate="%AppTitle">
         <ColorSchemeProvider
           colorScheme={colorScheme}
           toggleColorScheme={toggleColorScheme}

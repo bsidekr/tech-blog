@@ -1,13 +1,9 @@
-import { MetaTags } from '@redwoodjs/web'
-
 import Container from 'src/components/Container/Container'
 import SocialLinks from 'src/components/SocialLinks/SocialLinks'
 
 const AboutPage = () => {
   return (
     <>
-      <MetaTags title="About" description="About page" />
-
       <Container className="mt-16 sm:mt-32">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:pl-20">

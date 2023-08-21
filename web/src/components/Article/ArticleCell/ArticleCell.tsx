@@ -41,9 +41,9 @@ export const Success = ({
   return (
     <>
       <MetaTags
-        title={article.title}
+        title={`${article.title} | 비사이드코리아`}
         description={article.summary}
-        author={article.user.name}
+        author={'비사이드코리아'}
         locale={'ko'}
         ogContentUrl={article.thumbnail}
         ogWidth={'1200'}
