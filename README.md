@@ -1,6 +1,6 @@
 # Dev blog
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c94a3656-63fb-4c9c-beab-1738e2b27798/deploy-status)](https://app.netlify.com/sites/bside-tech-blog/deploys)
+![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=tech-blog-zaiyou12)
 
 Bside Dev Blog - Code Refactoring using RedwoodJs
 
