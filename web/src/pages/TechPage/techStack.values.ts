@@ -98,14 +98,6 @@ export const techStacks: TechStack[] = [
     link: 'https://firebase.google.com/docs/app-distribution',
   },
   {
-    categories: ['DB / Infra'],
-    label: 'Coherence',
-    src: 'https://uploads-ssl.webflow.com/6462990f476598b6fd0c9cd1/6462990f476598b6fd0c9d45_fav.png',
-    description:
-      'Coherence delivers automated environments across the full software development lifecycle, without requiring you to glue together your own mess of open source tools to get a world-class develper experience for your team.',
-    link: 'https://www.withcoherence.com/',
-  },
-  {
     categories: ['Web'],
     label: 'serverless',
     src: 'https://assets-global.website-files.com/60acbb950c4d6606963e1fed/60ffa106b035c8bc6a4b210e_favicon%20(1).png',
