@@ -1,19 +1,15 @@
 import type { QueryResolvers, UserRelationResolvers } from 'types/graphql'
 
 import { db } from 'src/lib/db'
+import { convertKeysToCamelCase } from 'src/lib/utils'
 
 export const users: QueryResolvers['users'] = () => {
-  return db.user.findMany()
-}
-
-export const user: QueryResolvers['user'] = ({ id }) => {
-  return db.user.findUnique({
-    where: { id },
-  })
+  return []
 }
 
 export const User: UserRelationResolvers = {
-  posts: (_obj, { root }) => {
-    return db.user.findUnique({ where: { id: root?.id } }).posts()
+  posts: async (_obj) => {
+    const posts = await db.tech_posts.findMany()
+    return posts.map((post) => convertKeysToCamelCase(post))
   },
 }
