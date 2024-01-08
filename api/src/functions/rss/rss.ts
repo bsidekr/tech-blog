@@ -40,8 +40,7 @@ const generateFeed = () => {
     id: 'tech.bside.ai',
     link: 'tech.bside.ai',
     language: 'ko-KR',
-    image:
-      'https://pocky-production-s3.s3.ap-northeast-2.amazonaws.com/uploads/files/about',
+    image: 'https://cdn.bside.ai/product_dartk_ebf8eeb1e3.webp',
     favicon: 'https://bside-tech-blog.netlify.app/favicon.png',
     copyright: 'All rights reserved 2023, Bside Korea',
   })

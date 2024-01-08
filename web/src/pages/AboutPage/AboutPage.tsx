@@ -9,12 +9,12 @@ const AboutPage = () => {
           <div className="lg:pl-20">
             <div className="max-w-xs px-2.5 lg:max-w-none">
               <img
-                src="https://pocky-production-s3.s3.ap-northeast-2.amazonaws.com/uploads/files/about"
+                src="https://cdn.bside.ai/product_dartk_ebf8eeb1e3.webp"
                 alt="bside korea app"
                 className="hidden rotate-3 rounded-2xl object-contain dark:block xs:max-w-lg"
               />
               <img
-                src="https://pocky-production-s3.s3.ap-northeast-2.amazonaws.com/uploads/files/about_light"
+                src="https://cdn.bside.ai/product_light_ec28859d0c.webp"
                 alt="bside korea app"
                 className="rotate-3 rounded-2xl object-contain dark:hidden xs:max-w-lg"
               />

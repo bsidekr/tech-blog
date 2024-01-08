@@ -16,7 +16,7 @@ const BlogLayout = ({ children }) => {
         description="우리는 문제와 해법에 접근하는 태도와 방식, 철학에 차이가 있다고 생각하며, 프로그래밍, 상품 디자인, 스타트업 등에 대한 우리의 생각들을 시간순으로 정리했습니다."
         ogType="website"
         locale="ko"
-        ogContentUrl="https://pocky-production-s3.s3.ap-northeast-2.amazonaws.com/uploads/files/about_light"
+        ogContentUrl="https://cdn.bside.ai/product_dartk_ebf8eeb1e3.webp"
         ogUrl="https://tech.bside.ai"
         contentType="website"
       />
